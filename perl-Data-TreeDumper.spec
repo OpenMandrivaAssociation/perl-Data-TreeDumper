@@ -1,6 +1,8 @@
 %define module   Data-TreeDumper
 %define version  0.33
-%define release  %mkrel 1
+%define release  %mkrel 2
+
+%define _requires_exceptions perl(Data::TreeDumper::OO)
 
 Name:       perl-%{module}
 Version:    %{version}
