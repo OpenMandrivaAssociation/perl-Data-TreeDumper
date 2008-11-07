@@ -1,6 +1,6 @@
 %define module   Data-TreeDumper
-%define version  0.33
-%define release  %mkrel 3
+%define version  0.35
+%define release  %mkrel 1
 
 %define _requires_exceptions perl(Data::TreeDumper::OO)
 
@@ -13,6 +13,7 @@ Summary:    Improved replacement for Data::Dumper
 Url:        http://search.cpan.org/dist/%{module}
 Source:     http://www.cpan.org/modules/by-module/Data/%{module}-%{version}.tar.gz
 BuildRequires: perl(Class::ISA)
+BuildRequires: perl(Check::ISA)
 BuildRequires: perl(Devel::Size)
 BuildRequires: perl(Sort::Naturally)
 BuildRequires: perl(Term::Size)
@@ -52,5 +53,3 @@ rm -rf %{buildroot}
 %doc README Changes
 %{_mandir}/man3/*
 %perl_vendorlib/Data
-%perl_vendorlib/auto/Data
-
