@@ -1,5 +1,5 @@
 %define upstream_name    Data-TreeDumper
-%define upstream_version 0.35
+%define upstream_version 0.37
 
 %define _requires_exceptions perl(Data::TreeDumper::OO)
 
