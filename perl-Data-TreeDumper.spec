@@ -1,5 +1,5 @@
 %define upstream_name    Data-TreeDumper
-%define upstream_version 0.40
+%define upstream_version 0.43
 
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Data::TreeDumper::OO\\)'
@@ -8,14 +8,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Improved replacement for Data::Dumper
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Data/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Data-TreeDumper
+Source0:	https://cpan.metacpan.org/authors/id/N/NK/NKH/Data-TreeDumper-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
