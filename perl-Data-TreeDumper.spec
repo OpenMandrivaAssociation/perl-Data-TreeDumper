@@ -1,6 +1,4 @@
 %define upstream_name    Data-TreeDumper
-%define upstream_version 0.43
-
 %if %{_use_internal_dependency_generator}
 %define __noautoreq 'perl\\(Data::TreeDumper::OO\\)'
 %else
@@ -8,14 +6,14 @@
 %endif
 
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.43
+Release:	2
 
 Summary:	Improved replacement for Data::Dumper
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Data-TreeDumper
-Source0:	https://cpan.metacpan.org/authors/id/N/NK/NKH/Data-TreeDumper-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/N/NK/NKH/Data-TreeDumper-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -38,7 +36,7 @@ Data::TreeDumper also dumps data in a tree-like fashion but hopefully in a
 format more easily understood.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -66,9 +64,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.350.0-1mdv2010.0
 + Revision: 403088
-- rebuild using %%perl_convert_version
-
-* Fri Nov 07 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.35-1mdv2009.1
+- rebuild using %0.43 Fri Nov 07 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.35-1mdv2009.1
 + Revision: 300779
 - new version
 
